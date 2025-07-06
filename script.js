@@ -360,3 +360,4 @@ if ('serviceWorker' in navigator) {
     video.src = '';
   }
 </script>
+// Lightbox modal for images and videos
