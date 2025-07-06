@@ -691,3 +691,137 @@ html {
   font-weight: bold;
   overflow-y: auto;
 }
+.skill-category {
+  padding: 20px;
+  margin: 10px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: visible;    /* ensures contents aren't clipped */
+  max-height: none;     /* remove any height limit */
+}
+
+.skill-tags {
+  flex-wrap: wrap;      /* allows items to break lines if needed */
+  overflow: visible;
+}
+
+.skill-tags .badge {
+  margin: 5px;
+  white-space: normal;  /* allows long lines to wrap */
+}
+.skill-category {
+  color: #111111; /* dark, readable text */
+  background-color: #ffffff; /* white background for contrast */
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.skill-tags .badge {
+  background-color: #10b981; /* teal/green highlight */
+  color: #ffffff;            /* white text */
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 20px;
+  margin: 5px;
+}
+.skill-category {
+  background-color: #1f2937;         /* dark gray for contrast */
+  color: #ffffff;                    /* white text for readability */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.skill-category h4 {
+  color: #f43f5e;                    /* bright red title */
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.skill-tags .badge {
+  background-color: #ef4444 !important; /* bright red badges */
+  color: #ffffff !important;            /* white text on badges */
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.skill-tags .badge:hover {
+  background-color: #dc2626 !important; /* darker red on hover */
+}
+/* Make the entire skill box clearer */
+.skill-category {
+  background-color: #f9fafb;    /* light gray background for contrast */
+  color: #111827;               /* very dark text for readability */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+/* Make subsection titles stand out */
+.skill-category h4 {
+  color: #b91c8a;                /* strong red for headings */
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+/* Style the badges uniformly and clearly */
+.skill-tags .badge {
+  background-color: #4af815 !important;  /* strong red badge background */
+  color: #ffffff !important;             /* white text on badge */
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  margin: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* Optional hover effect */
+.skill-tags .badge:hover {
+  background-color: #991b1b !important;
+}
+/* Skill tags container */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background-color: #f8f9fa; /* Light background for contrast */
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Individual badges inside skill-tags */
+.skill-tags .badge {
+  font-weight: 600;
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  opacity: 1;            /* Make sure they aren't transparent */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* On hover for better visibility and interactivity */
+.skill-tags .badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+/* Example color overrides for clarity if needed */
+.badge.bg-primary { background-color: #007bff; }
+.badge.bg-danger { background-color: #dc3545; }
+.badge.bg-info { background-color: #17a2b8; }
+.badge.bg-success { background-color: #28a745; }
