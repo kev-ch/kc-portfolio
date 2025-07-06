@@ -458,6 +458,8 @@ html {
     border-radius: 20px; /* Rounded corners */
     background: #f8f9fa; /* Light gray background */
     padding: 2rem;
+    text-decoration-color: red;
+    padding-top: 100;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
 }
@@ -517,4 +519,175 @@ html {
 
 #about {
     padding-top: 80px;
+}
+/* Container scrolling horizontally */
+.accomplishments-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
+}
+
+.accomplishment-card {
+  flex: 0 0 auto;
+  width: 250px;
+  border: 2px solid #dc3545;
+  border-radius: 12px;
+  background-color: #fff;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  scroll-snap-align: start;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.accomplishment-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.accomplishment-card img,
+.accomplishment-card video {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.accomplishment-card p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Lightbox modal */
+.lightbox-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.85);
+  text-align: center;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 80%;
+  margin-top: 5%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px; right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+/* Accomplishments Marquee Container */
+.accomplishments-marquee {
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  border: 2px solid #dc3545;
+  padding: 15px 0;
+  margin-top: 30px;
+}
+
+/* Track: Horizontal scroll animation */
+.accomplishments-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 40s linear infinite;
+}
+
+.accomplishments-marquee:hover .accomplishments-track {
+  animation-play-state: paused;
+}
+
+/* Animation Keyframes */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Accomplishment Card */
+.accomplishment-card {
+  flex: 0 0 auto;
+  width: 260px;
+  margin: 0 20px;
+  background-color: #fff;
+  border: 2px solid #dc3545;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.accomplishment-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Image inside Card */
+.accomplishment-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 2px solid #dc3545;
+}
+
+/* Text inside Card */
+.accomplishment-card p {
+  margin: 12px;
+  font-weight: bold;
+  color: #dc3545;
+  font-size: 15px;
+  text-align: center;
+}
+.accomplishment-card p {
+  margin: 12px;
+  font-weight: bold;
+  color: #333333;  /* NEW: dark gray instead of red */
+  font-size: 15px;
+  text-align: center;
+}
+.accomplishment-card {
+  flex: 0 0 auto;
+  width: 300px;             /* fixed width */
+  height: 250px;            /* fixed height */
+  padding: 20px;
+  margin: 10px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.accomplishment-card:hover {
+  transform: scale(1.03);
+}
+
+.accomplishment-card h4 {
+  color: #b91c1c;            /* red header text */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.accomplishment-card p {
+  color: #333;
+  font-weight: bold;
+  overflow-y: auto;
 }

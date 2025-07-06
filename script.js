@@ -333,3 +333,30 @@ if ('serviceWorker' in navigator) {
         });
     });
 }
+<script>
+  function openModal(src, type) {
+    const modal = document.getElementById('lightbox-modal');
+    const img = document.getElementById('lightbox-img');
+    const video = document.getElementById('lightbox-video');
+    
+    if (type === 'image') {
+      img.src = src;
+      img.style.display = 'block';
+      video.style.display = 'none';
+    } else if (type === 'video') {
+      video.src = src;
+      video.style.display = 'block';
+      img.style.display = 'none';
+    }
+    modal.style.display = 'block';
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('lightbox-modal');
+    modal.style.display = 'none';
+    document.getElementById('lightbox-img').src = '';
+    const video = document.getElementById('lightbox-video');
+    video.pause();
+    video.src = '';
+  }
+</script>
